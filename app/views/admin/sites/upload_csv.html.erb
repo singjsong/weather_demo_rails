@@ -1,0 +1,6 @@
+<%= form_for :csv, url: upload_csv_admin_sites_path do %>
+  <%= hidden_field_tag :ids, params[:collection_selection].join(', ') %>
+
+  <%= file_field_tag(:file, accept: 'text/csv') %>
+  <%= submit_tag 'Update CSV' %>
+<% end %>
